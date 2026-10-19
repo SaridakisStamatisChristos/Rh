@@ -61,3 +61,7 @@ See Johnston–Leong–Tudzi, *Experimental Mathematics*, DOI https://doi.org/10
 ### License status
 
 This public repository has no software license yet. Public visibility alone does not grant permission to reuse the code; licensing remains a deliberate future decision.
+
+## Phase XIV (20 October 2026)
+
+An unconditional moving-exponent stability lemma was proved, assuming the cited Mertens bound and Phase XII finite certificate: if `delta_N >= 0` and `N^(delta_N) = o(log N)`, then `C_(2-delta_N)(N) -> C_2(infinity) < -1/10`. A particularly useful instance is `delta_N = c log(log N)/log N` for any fixed `0<c<1`. The proof and finite illustrative experiment are in `research/riemann_phase14_proof.md` and `experiments/riemann_phase14_loglog_corridor.cpp`. This is **not** a result for fixed `alpha<2` and does not improve known zero-free regions. Analytic proof not peer-reviewed; the numerical experiment is only illustrative.
