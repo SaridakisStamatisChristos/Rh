@@ -24,9 +24,10 @@ This yields research targets involving upper bounds for `C_α(N)`. In particular
 ## Contents
 
 - `research/PHASES_01_09.md` — reconstructed chronology for early phases, including proofs, numerical observations, conjectures, and limitations.
-- `research/riemann_phase10_proof.md` through `riemann_phase13_proof.md` — phase-specific notes, original research drafts retained for audit.
+- `research/riemann_phase10_proof.md` through `riemann_phase14_proof.md` — phase-specific notes, original research drafts retained for audit.
+- `research/riemann_phase14_proof.md` — moving-exponent sign-stability theorem and limitations.
 - `certificates/` — finite integer-arithmetic C++ checks (original programs). These verify computations, not RH.
-- `experiments/` — additional C++ and Python cross-checks.
+- `experiments/` — additional C++ and Python cross-checks, including the Phase XIV log–log corridor experiment.
 - `research/STATUS_AND_AUDIT.md` — verification scope, hypotheses, source dependencies and next work.
 
 ## Reproduction
