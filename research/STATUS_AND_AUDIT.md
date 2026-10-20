@@ -119,3 +119,15 @@ Files: research/riemann_phase17_structural_barrier.md, certificates/riemann_phas
 **Executed in local Python:** exact fractions prove both trace formulas agree at all 12 (N,alpha) pairs N=4,8,12,24; alpha=1,2,3. NumPy spectral diagnostics at N=32,64,128,256 and alpha=1.25,1.5,2.0 passed, with e.g. N=256: alpha=1.25 trace=4.086603028, lambda_max=1.257977208; alpha=2 trace=1.571451294, lambda_max=0.971571343. No formal verification, no novelty assertion.
 
 Archived: research/riemann_phase19_operator_trace.md and experiments/riemann_phase19_operator_trace.py. The explicit Mertens input was verified against Johnston–Leong–Tudzi, Theorem A.1, https://doi.org/10.1080/10586458.2025.2483942. The algebra is related to established Hilbert spaces of Dirichlet series; novelty not established. RH remains open.
+
+## Phase XX (20 October 2026)
+
+**Classical/elementary exact identities (PROVED):** For the sieve-to-prefix Gram matrix H_(alpha,N), sum_e H_(alpha,N)(d,e)=d^(-alpha) sum_{m<=N/d}mu(m)/m^alpha, and the sum of *all* H entries is 1. From entries T(k,d)=1 for k/2<d<=k, tr(H)>= (1/2)sum_{k<=N} k^(-alpha). Thus the signed aggregate of all off-diagonal entries is exactly 1-tr(H), which is <= 1-(1/2) harmonic(N) at alpha=1 and tends to -infinity. For N>=3 this aggregate is strictly negative. No RH input is needed.
+
+**Sign counterexamples (exact):** at N=3, alpha=1, H12=H13=-1/3 while H23=+1/3. At N=5, alpha=1, sum_e H(1,e)=-1/30. Therefore neither entrywise positivity nor positive row sums may be used for Schur-type bounds.
+
+**Critical endpoint obstruction (PROVED using Hardy 1914):** The existence of a critical-line zero of zeta, together with the classical Mellin representation of 1/zeta and weighted Cauchy-Schwarz, implies limsup_N ||H_(1,N)|| / log N > 0. More quantitatively, if rho=1/2+i gamma is simple, limsup_N ||H_(1,N)|| / log N >= |rho*zeta'(rho)|^(-2); if rho is multiple, the limsup is infinite. Hence any all-N uniform alpha=1 operator-bound strategy is FALSE. This does not prohibit bounds at fixed alpha>1 and does not prove RH.
+
+**Executed:** Python 3 exact Fraction Gram and row-sum certificate for 15 (N,alpha) pairs N=3,5,8,16,32; alpha=1,2,3, PASS. Optional float spectral checks at N=32,64,128,256,512 support only finite observations. The exact formulas and Hardy argument are analytical proofs; the finite certificate is not a formal proof assistant.
+
+Files: research/riemann_phase20_offdiagonal.md and certificates/riemann_phase20_offdiagonal_certificate.py. Relevant source for existence of critical zeros: Hardy 1914; 2015 Journal of Number Theory centenary paper https://www.sciencedirect.com/science/article/pii/S0022314X14003515. Operator prior art: Brevig et al., multiplicative Hilbert matrix, DOI 10.1016/j.aim.2016.07.019, different kernel. Novelty unverified. **RH remains open.**
