@@ -42,6 +42,8 @@ This yields research targets involving upper bounds for `C_α(N)`. In particular
 - `experiments/riemann_phase27_prime_dilation.py` — executed exact finite reconstructions and weighted norm tests; accompanying CSV diagnostics are in `experiments/riemann_phase27_energy.csv` and `experiments/riemann_phase27_operator_norms.csv`.
 - `research/riemann_phase28_prime_covariance.md` — exactly certified infinite Möbius prime-step covariances of opposite signs, a finite energy sign reversal inside (1,2), and an exact signed all-prime telescoping energy identity.
 - `experiments/riemann_phase28_prime_covariance.py` — pure-Python exact rational covariance, analytic-tail, Möbius reconstruction, and independent double-sum checks.
+- `research/riemann_phase28_cross_prime_signs.md` — exact cross-prime energy identity, rigorous infinite counterexamples to universal positive correlation, and a Mellin-frequency explanation.
+- `experiments/riemann_phase28_cross_prime.py` — independently verified 1,024-term Möbius sieve, 36 rational bilinear checks, integer-rounded sign certificates and elementary infinite-tail bounds.
 - `certificates/` — finite integer-arithmetic C++ checks (original programs). These verify computations, not RH. The Phase XVII Python witness certificate checks an explicit nonmultiplicative countermodel.
 - `experiments/` — additional C++ and Python cross-checks, including Phase XIV–XV moving-exponent experiments, the Phase XVI randomized-null audit, the Phase XVII dyadic spectrum Phase XVIII exact Gram checks, Phase XIX spectral diagnostics, Phase XXI compressed-matrix tests, and Phase XXII normalized-trace diagnostics.
 - `research/STATUS_AND_AUDIT.md` — verification scope, hypotheses, source dependencies and next work.
