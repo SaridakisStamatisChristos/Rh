@@ -110,9 +110,9 @@ For human inspection, exact finite sums and conservative infinite intervals are:
 
 | p | J_(p,3)(1024) approximate | Tail bound | Certified interval for infinite J_(p,3) |
 |---:|---:|---:|---|
-| 2 | +0.090402684273 | 0.001464843750 | (+0.088937840523,+0.091867528023) |
-| 3 | -0.001979364261 | 0.000976562500 | (-0.002955926761,-0.001002801761) |
-| 5 | -0.004483629290 | 0.000585937500 | (-0.005069566790,-0.003897691790) |
+| 2 | +0.090402684273 | 0.001464843750 | (+0.0889378,+0.0918676) |
+| 3 | -0.001979364261 | 0.000976562500 | (-0.0029560,-0.0010028) |
+| 5 | -0.004483629290 | 0.000585937500 | (-0.0050696,-0.0038976) |
 
 **Scope:** This is an infinite mathematical sign theorem at \(\alpha=3\), which is **outside** the unsettled \(1<\alpha<2\) strip. Its research role is to **falsify** universal positive or negative cross-prime sign lemmas, even for the true Möbius function. It gives no upper Mertens bound.
 
