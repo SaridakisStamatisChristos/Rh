@@ -131,3 +131,17 @@ Archived: research/riemann_phase19_operator_trace.md and experiments/riemann_pha
 **Executed:** Python 3 exact Fraction Gram and row-sum certificate for 15 (N,alpha) pairs N=3,5,8,16,32; alpha=1,2,3, PASS. Optional float spectral checks at N=32,64,128,256,512 support only finite observations. The exact formulas and Hardy argument are analytical proofs; the finite certificate is not a formal proof assistant.
 
 Files: research/riemann_phase20_offdiagonal.md and certificates/riemann_phase20_offdiagonal_certificate.py. Relevant source for existence of critical zeros: Hardy 1914; 2015 Journal of Number Theory centenary paper https://www.sciencedirect.com/science/article/pii/S0022314X14003515. Operator prior art: Brevig et al., multiplicative Hilbert matrix, DOI 10.1016/j.aim.2016.07.019, different kernel. Novelty unverified. **RH remains open.**
+
+## Phase XXI (20 October 2026)
+
+**Exact arithmetic-dilation identity (PROVED):** The divisor-coordinate embedding U_d supported on multiples of d satisfies U_d* H_(alpha,N) U_d = d^(-alpha) H_(alpha,floor(N/d)) for every alpha>0.
+
+**Persistent RH obstruction (PROVED):** For any fixed D>=1 and any fixed alpha>1, uniform-in-N boundedness of the compression P_{d>=D} H_(alpha,N) P_{d>=D} is equivalent to uniform boundedness of Q_alpha(N;mu), by the basis e_D and the exact trace formula. Requiring these equivalent conditions for all alpha>1 is RH-equivalent. Deleting any fixed finite set of initial divisor coordinates cannot close the proof gap.
+
+**High-divisor spectral localization (PROVED unconditionally from |mu(n)|<=1):** For fixed 1<alpha<2 and 2<=D<=N, ||P_{d>=D}H_(alpha,N)P_{d>=D}|| <= [2/(2-alpha)] N^(2-alpha)/(D-1). For any eta in (0,alpha-1), choosing D=floor(N^(2-alpha+eta))+1 gives upper bound [2/(2-alpha)]N^(-eta). Positive-semidefinite Gram factorization yields 0<=lambda_max(H_N)-lambda_max(H_N[1:D-1,1:D-1])<=the same bound. This is an explicit dimension reduction but DOES NOT bound the difficult growing leading block.
+
+**Upper-half exact block (PROVED):** For d,e>floor(N/2), H_(alpha,N)(d,e)=max(d,e)^(-alpha). With L=ceil(N/2), its operator norm is between L/N^alpha and L/(floor(N/2)+1)^alpha, hence Theta_alpha(N^(1-alpha)) for fixed alpha>1.
+
+**Executed locally:** 60 rational-arithmetic test groups (N=8,12,24,36; alpha=1,2,3; dilations 2,3,4,5 plus upper-half checks), and 9 finite NumPy spectral comparisons (N=64,128,256; alpha=1.25,1.5,1.75); all PASS. No CI or formal proof-assistant claims. The locally executed script is substantially equivalent to the archived reproduction script.
+
+Files: research/riemann_phase21_dilation_localization.md; experiments/riemann_phase21_dilation_localization.py. Prior art includes Nikolski, Hardy Spaces, Ch.6 (2019), DOI 10.1017/9781316882108.008. Uniqueness/novelty not established. **RH remains open.**
