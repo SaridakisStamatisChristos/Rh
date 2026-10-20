@@ -107,3 +107,15 @@ Files: research/riemann_phase17_structural_barrier.md, certificates/riemann_phas
 **Executed:** In Python 3, independent exact lcm Gram expansion, inversion, recurrence and Fraction-valued max-kernel energy comparisons all passed for N=16,32,64,128. A fixed-seed 200-trial comparator at N=256,1024,4096 produced exact null expectations 1065, 5125 and 23953, while actual Mobius energy equals 1. The source files are research/riemann_phase18_divisor_gram.md and experiments/riemann_phase18_divisor_gram.py. Neither the algebra nor the null-model asymptotic is claimed novel.
 
 **RH remains open.** Phase XIX should test a genuinely nontrivial arithmetic bound on the sieve-to-prefix transfer, rather than treating exact divisor cancellation as a free norm bound.
+
+## Phase XIX (20 October 2026)
+
+**Proved (exact finite-dimensional algebra):** Let z_n=sum_{d|n}a_d and T_N(k,d)=1_{d<=k}M(floor(k/d)). The weighted prefix energy has Gram matrix H_(alpha,N)=T_N^*diag(w_(alpha,k))T_N, with diagonal H_dd=d^(-alpha) Q_alpha(floor(N/d);mu). Therefore tr(H_(alpha,N))=sum_{d<=N}d^(-alpha)Q_alpha(floor(N/d);mu).
+
+**Proved conditional only on prior certified/published mathematical inputs (not on RH):** Phase XII's C_alpha(m)<0 for all m>=2 and alpha>=2, together with S_alpha(infinity)=zeta(alpha)/zeta(2alpha), gives tr(H)<=zeta(alpha)^2/zeta(2alpha)<=5/2. Thus for arbitrary real/complex a, Q_alpha(N;a)<=5/2 sum_{n<=N}|sum_{d|n}a_d|^2 for alpha>=2. At alpha=2, Phase XII's quantitative C_2(m)<-1/10 strengthens the uniform bound to (5/2-pi^2/30) ~= 2.17101318663, also valid at m=1 by direct check.
+
+**The RH-equivalent barrier remains:** bounded tr(H_(alpha,N)) uniformly in N for every fixed alpha>1 would imply RH; RH implies the bound. The present alpha>=2 estimate is insufficient. Numerical largest eigenvalues or traces at finite sizes cannot prove any uniform estimate for 1<alpha<2.
+
+**Executed in local Python:** exact fractions prove both trace formulas agree at all 12 (N,alpha) pairs N=4,8,12,24; alpha=1,2,3. NumPy spectral diagnostics at N=32,64,128,256 and alpha=1.25,1.5,2.0 passed, with e.g. N=256: alpha=1.25 trace=4.086603028, lambda_max=1.257977208; alpha=2 trace=1.571451294, lambda_max=0.971571343. No formal verification, no novelty assertion.
+
+Archived: research/riemann_phase19_operator_trace.md and experiments/riemann_phase19_operator_trace.py. The explicit Mertens input was verified against Johnston–Leong–Tudzi, Theorem A.1, https://doi.org/10.1080/10586458.2025.2483942. The algebra is related to established Hilbert spaces of Dirichlet series; novelty not established. RH remains open.
