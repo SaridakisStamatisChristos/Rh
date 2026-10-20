@@ -1,0 +1,7 @@
+p,q,exponent,cutoff,gamma_lower,gamma_upper,delta_lower,delta_upper,tail_method
+2,3,3,4096,0.032511006748,0.032999288002,-0.243944572835,-0.240770744706,exact scaled rational + absolute integral tail
+2,5,3,4096,0.001104489749,0.001397458503,-0.175903600432,-0.172777623865,exact scaled rational + absolute integral tail
+2,7,3,4096,-0.002001890943,-0.001792627546,-0.174481791136,-0.171364193647,exact scaled rational + absolute integral tail
+3,5,3,4096,0.002629232559,0.002824545063,0.005973902357,0.008969996111,exact scaled rational + absolute integral tail
+3,7,3,4096,-0.000356288777,-0.000216779844,0.007125752707,0.010114122538,exact scaled rational + absolute integral tail
+5,7,3,4096,0.001899710816,0.001983416177,0.007699529458,0.010645240559,exact scaled rational + absolute integral tail
