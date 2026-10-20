@@ -38,7 +38,7 @@ Summing all matrix entries,
 \boxed{\mathbf1^\ast H_{\alpha,N}\mathbf1=1.}
 \tag{2}
 \]
-This identity holds for every \(N,\alpha>0\).
+This identity holds for every \(N,\alpha>0\). **Interpretation:** The coordinate vector \(z=\mathbf1\) corresponds under inverse Möbius transformation to \(a_n=\sum_{d\mid n}\mu(n/d)=\mathbf1_{n=1}\). Therefore the total-sum identity represents the energy of a point mass at 1. It is a classical cancellation identity, not independent evidence of RH.
 
 ## 3. Quantitative off-diagonal cancellation
 
