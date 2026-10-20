@@ -30,8 +30,9 @@ This yields research targets involving upper bounds for `C_α(N)`. In particular
 - `research/riemann_phase16_dyadic_cancellation.md` — dyadic counterexample, finite exponent-uniform proof, one-sided budget criterion, and randomized null model.
 - `research/riemann_phase17_structural_barrier.md` — dyadic positive-budget criterion and explicit countermodel showing why generic Mertens bounds cannot force fixed-exponent negativity.
 - `research/riemann_phase18_divisor_gram.md` — exact divisor Gram identity, random-sign null expectation and the precise sieve-to-prefix transfer obstruction.
+- `research/riemann_phase19_operator_trace.md` — exact trace of the sieve-to-prefix operator and an explicit all-coefficient bound at exponent 2.
 - `certificates/` — finite integer-arithmetic C++ checks (original programs). These verify computations, not RH. The Phase XVII Python witness certificate checks an explicit nonmultiplicative countermodel.
-- `experiments/` — additional C++ and Python cross-checks, including Phase XIV–XV moving-exponent experiments, the Phase XVI randomized-null audit, the Phase XVII dyadic spectrum and Phase XVIII exact Gram checks.
+- `experiments/` — additional C++ and Python cross-checks, including Phase XIV–XV moving-exponent experiments, the Phase XVI randomized-null audit, the Phase XVII dyadic spectrum Phase XVIII exact Gram checks, and Phase XIX spectral diagnostics.
 - `research/STATUS_AND_AUDIT.md` — verification scope, hypotheses, source dependencies and next work.
 
 ## Reproduction
