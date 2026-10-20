@@ -24,10 +24,11 @@ This yields research targets involving upper bounds for `C_α(N)`. In particular
 ## Contents
 
 - `research/PHASES_01_09.md` — reconstructed chronology for early phases, including proofs, numerical observations, conjectures, and limitations.
-- `research/riemann_phase10_proof.md` through `riemann_phase14_proof.md` — phase-specific notes, original research drafts retained for audit.
-- `research/riemann_phase14_proof.md` — moving-exponent sign-stability theorem and limitations.
+- `research/riemann_phase10_proof.md` through `riemann_phase15_proof.md` — phase-specific notes, original research drafts retained for audit.
+- `research/riemann_phase14_proof.md` — logarithmic moving-exponent sign-stability theorem.
+- `research/riemann_phase15_proof.md` — Korobov–Vinogradov moving-exponent corridor and the fixed-exponent obstruction.
 - `certificates/` — finite integer-arithmetic C++ checks (original programs). These verify computations, not RH.
-- `experiments/` — additional C++ and Python cross-checks, including the Phase XIV log–log corridor experiment.
+- `experiments/` — additional C++ and Python cross-checks, including the Phase XIV and XV moving-exponent experiments.
 - `research/STATUS_AND_AUDIT.md` — verification scope, hypotheses, source dependencies and next work.
 
 ## Reproduction
