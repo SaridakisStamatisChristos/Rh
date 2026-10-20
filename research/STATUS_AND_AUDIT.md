@@ -69,3 +69,16 @@ An unconditional moving-exponent stability lemma was proved, assuming the cited 
 ## Phase XV (20 October 2026)
 
 **Proof status: analytical derivation, not peer-reviewed; not a proof of RH.** By combining the unconditional Korobov–Vinogradov estimate `M(x) = O(x exp(-κ (log x)^(3/5)/(loglog x)^(1/5)))` (some κ>0) with the existing Phase XII global `C_2(N)<-1/10` certificate, the proof shows: for any nonnegative sequence `δ_N = o((log N)^(-2/5)(loglog N)^(-1/5))`, one has `C_(2-δ_N)(N) -> C_2(∞)<-1/10`, uniformly in exponent over `[2-δ_N,2]`. An accessible example is `δ_N=1/sqrt(log N)`. The proof is in `research/riemann_phase15_proof.md` and the C++ finite diagnostic is in `experiments/riemann_phase15_korobov_corridor.cpp`. A local C++17 compile-and-run passed, including a separate trial-division Möbius check through n=2000. This is a standard transfer of a known cancellation estimate, **not** a fixed exponent <2 and **not** an improvement of the known zeta zero-free region. Novelty not established.
+
+
+## Phase XVI (20 October 2026)
+
+**Adversarial finding:** A universal nonpositive dyadic correlation-block claim is **false**. For every real \(\alpha>0\), the block \(4<n\le8\) equals \(5^{-\alpha}-2\,6^{-\alpha}+7^{-\alpha}>0\); at \(\alpha=1\) this is \(1/105\).
+
+**Finite rigor:** The C++17 scaled-integer bound independently checks all \(C_1(N)<-299/1000\) for \(2\le N\le10^7\), with a separate trial-division Möbius check through \(n=2000\). Abel summation **proves** that every \(C_\alpha(N)<-(299/1000)2^{1-\alpha}\) in this finite range for every real \(\alpha\ge1\). This is not an unbounded-N proof.
+
+**Dyadic criterion:** For each fixed \(\alpha>1\), summability of the positive dyadic block contributions gives a zero-free half-plane \(\Re(s)>\alpha/2\). Requiring this condition for every \(\alpha>1\) is equivalent to RH. Thus the criterion reformulates the unsolved obligation without assuming falsely that each block is negative.
+
+**Randomized null model:** On the actual squarefree support, independent Rademacher signs yield a martingale difference correlation, with zero expectation and exact variance \(\sum_{n\le N}\mu(n)^2 S(n-1)n^{-2\alpha}\). It converges in \(L^2\) and almost surely for \(\alpha>1\), but this does not transfer to the deterministic arithmetic Möbius signs. A fixed-seed experiment with 4,000 replications at \(N=50,000,\alpha=3/2\) showed sample variance \(0.30219501\), against theoretical \(0.30020787\).
+
+Sources: \`research/riemann_phase16_dyadic_cancellation.md\`, \`experiments/riemann_phase16_experiment.cpp\`. The exact arithmetic certificate executed locally using \`g++ -std=c++17 -O3 -Wall -Wextra -Werror\`; no CI claim. **RH remains open.** Novelty has not been established.
