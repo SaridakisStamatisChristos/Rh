@@ -145,3 +145,15 @@ Files: research/riemann_phase20_offdiagonal.md and certificates/riemann_phase20_
 **Executed locally:** 60 rational-arithmetic test groups (N=8,12,24,36; alpha=1,2,3; dilations 2,3,4,5 plus upper-half checks), and 9 finite NumPy spectral comparisons (N=64,128,256; alpha=1.25,1.5,1.75); all PASS. No CI or formal proof-assistant claims. The locally executed script is substantially equivalent to the archived reproduction script.
 
 Files: research/riemann_phase21_dilation_localization.md; experiments/riemann_phase21_dilation_localization.py. Prior art includes Nikolski, Hardy Spaces, Ch.6 (2019), DOI 10.1017/9781316882108.008. Uniqueness/novelty not established. **RH remains open.**
+
+## Phase XXII (20 October 2026)
+
+**Proved, but not claimed novel:** For any single fixed alpha in (0,2), M(N)=o(N) (equivalently PNT) if and only if ||H_(alpha,N)||=o(N^(2-alpha)). Forward: Q_alpha(m)=o(m^(2-alpha)) from M=o(N); dominated convergence in the exact divisor-coordinate trace with d^(-2) domination; reverse: H_11=Q_alpha(N)>=M(N)^2/N^alpha.
+
+**Power-saving equivalence (PROVED but an equivalent reformulation, not a new zero-free region):** For 1<alpha<2, 0<eta<2-alpha, beta=2-alpha-eta>0 and theta=1-eta/2>1/2, one has ||H_(alpha,N)||=O(N^beta) iff M(N)=O(N^theta). If |M(k)|<=B k^theta, then Q_alpha(m)<=B^2[1+alpha(1+1/beta)]m^beta and the operator norm is bounded by B^2[1+alpha(1+1/beta)] zeta(2theta) N^beta. Conversely use the first diagonal and positive endpoint square. Any new fixed spectral power saving would produce a corresponding fixed zero-free half-plane Re(s)>theta; NONE is proved here.
+
+**Unconditional effective-rate class (PROVED using existing external theorem):** For fixed 0<alpha<2, classical Korobov–Vinogradov/Mertens cancellation |M(x)|<=A x exp(-b (log x)^(3/5)/(loglog x)^(1/5)) implies ||H_(alpha,N)|| <= C_alpha N^(2-alpha) exp(-c_alpha (log N)^(3/5)/(loglog N)^(1/5)) for large N and unspecified positive constants. This is a classical subpower saving in new coordinates, not a better zero-free region.
+
+**Executed locally:** exact rational trace identities PASS in 9/9 cases (N=4,8,16; alpha=1,2,3). Direct Gram spectra and trace formula agree for N=128,512 and alpha=1.25,1.5,1.75. Deterministic Mobius sieve through N=524288 and normalized trace table show finite decreases; this does NOT prove asymptotic decay or RH. Reproduction source: experiments/riemann_phase22_spectral_pnt.py; results: experiments/riemann_phase22_results.csv; proof: research/riemann_phase22_spectral_pnt.md.
+
+**Prior art sources:** Standard M=o(x) iff PNT; Nicol Leong's 2025/26 Cambridge paper on effective Mertens bounds and K–V; Ghosh et al., Advances in Mathematics 2024, related zero-free half-plane functional-analytic characterizations. Proof novelty NOT established. The Clay Mathematics Institute lists RH as unsolved as of October 2026.
