@@ -157,3 +157,17 @@ Files: research/riemann_phase21_dilation_localization.md; experiments/riemann_ph
 **Executed locally:** exact rational trace identities PASS in 9/9 cases (N=4,8,16; alpha=1,2,3). Direct Gram spectra and trace formula agree for N=128,512 and alpha=1.25,1.5,1.75. Deterministic Mobius sieve through N=524288 and normalized trace table show finite decreases; this does NOT prove asymptotic decay or RH. Reproduction source: experiments/riemann_phase22_spectral_pnt.py; results: experiments/riemann_phase22_results.csv; proof: research/riemann_phase22_spectral_pnt.md.
 
 **Prior art sources:** Standard M=o(x) iff PNT; Nicol Leong's 2025/26 Cambridge paper on effective Mertens bounds and K–V; Ghosh et al., Advances in Mathematics 2024, related zero-free half-plane functional-analytic characterizations. Proof novelty NOT established. The Clay Mathematics Institute lists RH as unsolved as of October 2026.
+
+## Phase XXIII (20 October 2026)
+
+**Exact linear algebra (PROVED):** The inverse of T_N(k,d)=1_{d<=k}M(floor(k/d)) is B_N(d,k)=1_{k|d}-1_{k+1|d}; therefore H_(alpha,N)^(-1)=B_N W^(-1) B_N^*, and det(H)=N^(-alpha)*product_{k<N}[k^(-alpha)-(k+1)^(-alpha)], independent of Mobius values. For v, the inverse quadratic form is sum_k w_k^(-1) |sum_{km<=N} v_{km} - sum_{(k+1)m<=N} v_{(k+1)m}|^2.
+
+**Exact inverse trace and new asymptotic deduction (PROVED, no RH):** tr H^(-1) = sum_{k=1}^N [floor(N/k)+floor(N/(k+1))-2floor(N/[k(k+1)])]/w_(alpha,k) = [2*zeta(alpha+2)/(alpha*(alpha+2))]*N^(alpha+2)+O_alpha(N^(alpha+1)) for every fixed alpha>0. Derivation uses the power-sum asymptotic, a divisor-counting interchange, and the fact that the cross-lcm term comes only from k<=sqrt(N).
+
+**Sharp smallest-eigenvalue order (PROVED, alpha>1):** (N/3)^(alpha+1)/alpha <= ||H^(-1)|| <= [4*2^(alpha+1)*zeta(alpha)/alpha] N^(alpha+1) for N>=4. Thus lambda_min(H)=Theta_alpha(N^(-alpha-1)), unconditionally. This rate of ill-conditioning exists even if RH is true.
+
+**RH-equivalent condition-number reformulation (NOT AN RH PROOF):** Since kappa_2(H)=lambda_max(H)*||H^(-1)||, RH is equivalent to requiring for every fixed alpha>1 that kappa_2(H)=O_alpha(N^(alpha+1)). At alpha>=2 this condition-number growth is already unconditional by the earlier Phase XII/XIX result lambda_max(H)<=5/2, coupled with lambda_max(H)>=1-2^(-alpha). For 1<alpha<2, uniform control on the largest eigenvalue is still open.
+
+**Independently executed in the available Python environment:** Exact Fraction tests passed for N=3,4,8,12,20; alpha=1,2,3 (15 exact pairs), confirming T*B=B*T=I, H*H^(-1)=I and inverse trace formula. NumPy eigenvalue/trace comparisons passed for N=32,64,128,256 and alpha=1.25,1.5,2 (12 finite cases). For N=256, alpha=1.5, lambda_min=3.65454737e-7, lambda_max=1.10182218, inverse trace divided by N^(alpha+2)=0.429840369 vs asymptotic 0.429231949. Finite computations are not proof of RH.
+
+Files: research/riemann_phase23_inverse_spectrum.md; experiments/riemann_phase23_inverse_spectrum.py. Research priority: investigate largest eigenvalue at fixed 1<alpha<2; exact determinants and small eigenvalues alone cannot resolve RH. Closest prior art: Roesler 1986 RH eigenvalue paper and Ilmonen–Kaarnioja 2018 lattice-incidence eigenvalue paper. No novelty claim; **RH remains open**.
