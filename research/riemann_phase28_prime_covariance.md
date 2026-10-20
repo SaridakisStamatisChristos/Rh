@@ -154,7 +154,36 @@ For \(f(x)=\mathbf1_{x\ge1}\), (11) reduces to
 \(\langle S_df,S_ef\rangle_\alpha=\max(d,e)^{-\alpha}\).
 Expanding the infinite prime product on every finite interval then recovers the same maximum kernel \(Q_\alpha\) from Phases I–XXIII. This identifies the central circularity: an arbitrary estimate that "all cross-prime terms cancel favorably" would have to prove, rather than assume, the original RH-equivalent arithmetic cancellation.
 
-## 5. Evidence and reproducibility
+## 5. Exact telescoping over all primes up to a finite cutoff
+
+This is the precise aggregate identity to which a future *quantitative* cancellation theorem would apply. Let \(X\ge2\) be an integer, list all primes \(p_1<\cdots<p_r\le X\), let \(P_j=\{p_1,\ldots,p_j\}\) with \(P_0=\varnothing\), and write
+\[
+F_j(x)=\sum_{\substack{n\le x\\q\nmid n\text{ for each }q\in P_j}}\mu(n).
+\]
+Thus \(F_0=M\) and \(F_{j-1}=(I-S_{p_j})F_j\). The one-prime polarization identity telescopes to
+\[
+\boxed{
+E_{\alpha,X}(M)
+=
+1-X^{-\alpha}
++
+\sum_{j=1}^r\left[
+p_j^{-\alpha}E_{\alpha,X/p_j}(F_j)
+-2\alpha\int_1^X F_j(x)F_j(x/p_j)x^{-\alpha-1}\,dx
+\right].
+}
+\tag{12}
+\]
+Indeed, by subtracting the successive energies one has
+\(E_{\alpha,X}(F_{j-1})-E_{\alpha,X}(F_j)
+=p_j^{-\alpha}E_{\alpha,X/p_j}(F_j)-2J_{p_j,\alpha}(F_j;X)\).
+The final \(F_r(x)\) is identically \(1\) on \(1\le x<X\) because every integer \(2\le n<X\) has a prime divisor at most \(X\). Thus \(E_{\alpha,X}(F_r)=1-X^{-\alpha}\), proving (12).
+
+This is an **exact finite arithmetic identity** for every \(\alpha>0\), with no RH input. The aggregate correction in (12) is not currently bounded in the required way for fixed \(1<\alpha<2\). A purported upper bound on it sufficient for RH would need a genuinely new cancellation estimate, not a substitution of the sharp unrestricted Hilbert-space norms from Phase XXVII.
+
+The companion certificate independently checked the complete telescoping identity at \(X=16,32,64\) and \(\alpha=1,2,3\): **9/9 exact cases PASS**.
+
+## 6. Evidence and reproducibility
 
 Run \`python3 experiments/riemann_phase28_prime_covariance.py\` using Python 3 standard library (no NumPy/SymPy dependencies).
 
@@ -163,10 +192,11 @@ Run \`python3 experiments/riemann_phase28_prime_covariance.py\` using Python 3 s
 - Exact finite sign reversal and the two displayed fractions at X=32: **PASS**.
 - Exact one-prime reconstruction and energy polarization for p=2,3,5, each at alpha=1,2,3: **9/9 PASS**.
 - Independent finite double-sum validation of (5) at X=16,32,64, p=2,3,5, alpha=1,2,3: **27/27 PASS**.
+- Aggregate all-prime telescoping identity (12) at X=16,32,64 and alpha=1,2,3: **9/9 PASS**.
 
-These computational checks supplement the complete proofs (1)–(11). No peer-review, formal proof-assistant, or CI run is claimed.
+These computational checks supplement the complete proofs (1)–(12). No peer-review, formal proof-assistant, or CI run is claimed.
 
-## 6. Verdict and future proof obligation
+## 7. Verdict and future proof obligation
 
 **PROVED:** Prime-step covariance energy identity; exact rational finite counterexample to exponent-independent monotonicity; opposite-signed *infinite* correlations for the true Möbius function at alpha=3; rational-scale pairwise-dilation identity.
 
@@ -174,7 +204,7 @@ These computational checks supplement the complete proofs (1)–(11). No peer-re
 
 **Discriminating next target:** investigate aggregate cross-prime correlations **with quantified cancellation and error rates** instead of imposing a false individual sign assumption. Any unconditional fixed-exponent estimate must go beyond the Euler-product operator norms from Phase XXVII, which are sharp for unrestricted Hilbert-space functions.
 
-## Closest verified related literature
+## 8. Closest verified related literature
 
 - Maier and Rassias, *Explicit estimates of sums related to the Nyman–Beurling criterion for the Riemann Hypothesis*, Journal of Functional Analysis 276 (2019), 3832–3857. https://www.sciencedirect.com/science/article/pii/S0022123618302544
 - Ng, *The distribution of the summatory function of the Möbius function* (2003 preprint), https://arxiv.org/abs/math/0310381
