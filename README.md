@@ -33,8 +33,9 @@ This yields research targets involving upper bounds for `C_α(N)`. In particular
 - `research/riemann_phase19_operator_trace.md` — exact trace of the sieve-to-prefix operator and an explicit all-coefficient bound at exponent 2.
 - `research/riemann_phase20_offdiagonal.md` — exact row sums, logarithmically growing negative aggregate off-diagonal contributions, and the critical-exponent spectral obstruction.
 - `research/riemann_phase21_dilation_localization.md` — exact arithmetic-dilation symmetry, finite-coordinate no-go theorem, and unconditional high-divisor spectral compression.
+- `research/riemann_phase22_spectral_pnt.md` — a spectral reformulation of the Prime Number Theorem, exact spectral power-saving equivalences, and an unconditional Korobov–Vinogradov subpower bound.
 - `certificates/` — finite integer-arithmetic C++ checks (original programs). These verify computations, not RH. The Phase XVII Python witness certificate checks an explicit nonmultiplicative countermodel.
-- `experiments/` — additional C++ and Python cross-checks, including Phase XIV–XV moving-exponent experiments, the Phase XVI randomized-null audit, the Phase XVII dyadic spectrum Phase XVIII exact Gram checks, Phase XIX spectral diagnostics, and Phase XXI compressed-matrix tests.
+- `experiments/` — additional C++ and Python cross-checks, including Phase XIV–XV moving-exponent experiments, the Phase XVI randomized-null audit, the Phase XVII dyadic spectrum Phase XVIII exact Gram checks, Phase XIX spectral diagnostics, Phase XXI compressed-matrix tests, and Phase XXII normalized-trace diagnostics.
 - `research/STATUS_AND_AUDIT.md` — verification scope, hypotheses, source dependencies and next work.
 
 ## Reproduction
