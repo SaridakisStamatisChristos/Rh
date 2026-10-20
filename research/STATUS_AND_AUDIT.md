@@ -171,3 +171,15 @@ Files: research/riemann_phase21_dilation_localization.md; experiments/riemann_ph
 **Independently executed in the available Python environment:** Exact Fraction tests passed for N=3,4,8,12,20; alpha=1,2,3 (15 exact pairs), confirming T*B=B*T=I, H*H^(-1)=I and inverse trace formula. NumPy eigenvalue/trace comparisons passed for N=32,64,128,256 and alpha=1.25,1.5,2 (12 finite cases). For N=256, alpha=1.5, lambda_min=3.65454737e-7, lambda_max=1.10182218, inverse trace divided by N^(alpha+2)=0.429840369 vs asymptotic 0.429231949. Finite computations are not proof of RH.
 
 Files: research/riemann_phase23_inverse_spectrum.md; experiments/riemann_phase23_inverse_spectrum.py. Research priority: investigate largest eigenvalue at fixed 1<alpha<2; exact determinants and small eigenvalues alone cannot resolve RH. Closest prior art: Roesler 1986 RH eigenvalue paper and Ilmonen–Kaarnioja 2018 lattice-incidence eigenvalue paper. No novelty claim; **RH remains open**.
+
+## Phase XXIV (20 October 2026)
+
+**Exact finite arithmetic algebra (PROVED, novelty not established):** The inverse Gram matrix has B(d,k)=1_{k|d}-1_{k+1|d}. For any distinct odd primes p,q<=N, (H_(alpha,N)^(-1))_(pq)=1/w_(alpha,1). The odd-prime block is diag(d_p)+c1*11^T, with d_p=1/w_(alpha,p-1)+1/w_(alpha,p) and c1=1/w_(alpha,1).
+
+**Uniform diagonal preconditioning (PROVED for each fixed alpha>0):** D^(-1/2) G_prime D^(-1/2)=I+c1*s*s^T with s_p=d_p^(-1/2). It has one eigenvalue 1+c1*sum_p 1/d_p; the others equal 1. Using d_p >= (p-1)^(alpha+1)/alpha gives an N-independent upper bound 1+alpha*(zeta(alpha+1)-1)/(1-2^(-alpha)). This controls a prime-indexed restricted block of the INVERSE, not the full primal norm.
+
+**Prime-coordinate interpolation inequality (PROVED):** For z_n=sum_{d|n}a_d and every N>=3, alpha>0, the primal energy z*H z is at least w1*|z1|^2+w2*|z2|^2+w3*|z2+z3-z1|^2+sum_{odd primes p>=5,p<=N}|zp-z1|^2/(1/w_(p-1)+1/w_p). This follows by exact inversion of the principal inverse block on indices {1,2}+odd primes and the positive-definite Schur complement. For a=mu this supplies only a finite, explicit LOWER bound on Q_alpha(N;mu), not the upper bound equivalent to RH.
+
+**Failure of naive composite extension (PROVED):** At N>=15 the inverse entry (9,15) equals c1+c2+c3>c1, so the rank-one formula is special to odd primes.
+
+**Executed locally:** Python 3 fractions.Fraction checks passed at N=3,5,8,12,18 and alpha=1,2,3: 15 cases covering prime-pair inverse entries, exact inverse of the restricted inverse block, Schur interpolation inequality; composite (9,15) check PASS. The rank-one spectral formula was checked numerically at N=31,127,509,1021 and alpha=1,1.5,2 (12 combinations). Archived: research/riemann_phase24_prime_dual.md; experiments/riemann_phase24_prime_dual.py. No peer review or claim of novel mathematics; **RH remains open**.
