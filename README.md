@@ -32,8 +32,9 @@ This yields research targets involving upper bounds for `C_α(N)`. In particular
 - `research/riemann_phase18_divisor_gram.md` — exact divisor Gram identity, random-sign null expectation and the precise sieve-to-prefix transfer obstruction.
 - `research/riemann_phase19_operator_trace.md` — exact trace of the sieve-to-prefix operator and an explicit all-coefficient bound at exponent 2.
 - `research/riemann_phase20_offdiagonal.md` — exact row sums, logarithmically growing negative aggregate off-diagonal contributions, and the critical-exponent spectral obstruction.
+- `research/riemann_phase21_dilation_localization.md` — exact arithmetic-dilation symmetry, finite-coordinate no-go theorem, and unconditional high-divisor spectral compression.
 - `certificates/` — finite integer-arithmetic C++ checks (original programs). These verify computations, not RH. The Phase XVII Python witness certificate checks an explicit nonmultiplicative countermodel.
-- `experiments/` — additional C++ and Python cross-checks, including Phase XIV–XV moving-exponent experiments, the Phase XVI randomized-null audit, the Phase XVII dyadic spectrum Phase XVIII exact Gram checks, and Phase XIX spectral diagnostics.
+- `experiments/` — additional C++ and Python cross-checks, including Phase XIV–XV moving-exponent experiments, the Phase XVI randomized-null audit, the Phase XVII dyadic spectrum Phase XVIII exact Gram checks, Phase XIX spectral diagnostics, and Phase XXI compressed-matrix tests.
 - `research/STATUS_AND_AUDIT.md` — verification scope, hypotheses, source dependencies and next work.
 
 ## Reproduction
