@@ -82,3 +82,16 @@ An unconditional moving-exponent stability lemma was proved, assuming the cited 
 **Randomized null model:** On the actual squarefree support, independent Rademacher signs yield a martingale difference correlation, with zero expectation and exact variance \(\sum_{n\le N}\mu(n)^2 S(n-1)n^{-2\alpha}\). It converges in \(L^2\) and almost surely for \(\alpha>1\), but this does not transfer to the deterministic arithmetic Möbius signs. A fixed-seed experiment with 4,000 replications at \(N=50,000,\alpha=3/2\) showed sample variance \(0.30219501\), against theoretical \(0.30020787\).
 
 Sources: \`research/riemann_phase16_dyadic_cancellation.md\`, \`experiments/riemann_phase16_experiment.cpp\`. The exact arithmetic certificate executed locally using \`g++ -std=c++17 -O3 -Wall -Wextra -Werror\`; no CI claim. **RH remains open.** Novelty has not been established.
+
+## Phase XVII (20 October 2026)
+
+**Proved analytically, but not peer-reviewed or claimed novel:**
+- RH is equivalent to finiteness, for every alpha>1, of the cumulative positive dyadic-shell budget sum_j max(C_alpha(2^(j+1))-C_alpha(2^j),0). This remains an equivalent criterion, NOT a proof of RH.
+- A hypothetical zero at beta>1/2 forces unbounded polynomially normalized positive budgets at every alpha in (1,2 beta), for exponents below 2 beta-alpha.
+- An explicit NONMULTIPLICATIVE surrogate b_n in {-1,0,1} satisfies |sum_{n<=x} b_n| <= x/(log x)^2 for all x>1, but has arbitrarily large positive fixed-alpha correlation for any 1<alpha<2. For alpha=3/2, R=10^30 and H=R/20000, an exact rational lower bound makes correlation >9. This defeats a proof using ONLY the summatory envelope and coefficient range; it does not disprove any claim specifically about the multiplicative Mobius function.
+
+**Locally executed:** A GCC C++17 -O3 -Wall -Wextra -Werror computation examined dyadic shell contributions through N=2^23 at alpha 1, 1.25, 1.5, 1.75 and 2. Exactly two shells, (4,8] and (16,32], were positive at all five sampled exponents; other tested shells were nonpositive. A Python fractions.Fraction certificate verified the explicit surrogate example (PASS). Both are finite demonstrations, not an all-N sign proof.
+
+Files: research/riemann_phase17_structural_barrier.md, certificates/riemann_phase17_witness.py, experiments/riemann_phase17_dyadic_spectrum.cpp, and experiments/riemann_phase17_dyadic_spectrum.csv.
+
+**Outstanding:** exploit arithmetic multiplicativity or another Mobius-specific principle to control the positive budget for fixed 1<alpha<2. RH remains open.
