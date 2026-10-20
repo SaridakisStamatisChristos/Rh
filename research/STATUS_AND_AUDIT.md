@@ -209,3 +209,19 @@ Source: research/riemann_phase25_odd_divisor.md; verification: experiments/riema
 **Independent exact checks executed:** 36 N/alpha combinations, N=3,4,5,8,9,10,11,16,20,21,24,31; alpha=1,2,3, plus 108 seeded exact rational vectors. Verified inverse matrix, weighted odd GCD entries, Möbius inversion of the odd incidence matrix, enhanced odd+2 Schur complement, full parity decomposition and nonnegative residual. All PASS; source is experiments/riemann_phase26_parity_residual.py. No CI, peer review or formal verification claim.
 
 **Scientific interpretation:** The uniformly normalized inverse odd block from Phase XXV is valid, but the direct parity-matching identity proves the lower estimate does not supply the upper bound needed for RH. The residual still contains weighted averages of consecutive Mertens values and remains uncontrolled for fixed 1<alpha<2. **RH remains open.**
+
+## Phase XXVII (20 October 2026) — prime-dilation and sharp norm barrier
+
+**Exact arithmetic (PROVED):** For a finite prime set P, define M_P(x)=sum_{n<=x,(n,prod(P))=1}mu(n) and S_p f(x)=f(x/p), zero below 1. Then M=prod_{p in P}(I-S_p) M_P and M_P=prod_{p in P}(I-S_p)^(-1) M, where the latter sum is finite at every fixed x and ranges over P-smooth integers including prime powers.
+
+**Weighted energy (PROVED):** In H_alpha=L2([1,infinity),alpha*x^(-alpha-1)dx), ||S_p||=p^(-alpha/2), so for finite P and any finite cutoff X, [prod(1-p^(-alpha/2))] ||M_P||_(alpha,X) <= ||M||_(alpha,X) <= [prod(1+p^(-alpha/2))] ||M_P||_(alpha,X). The finite energy is the weighted sum over k<X without the endpoint correction in finite Q_alpha(X). Membership of M and M_P in H_alpha is equivalent for every fixed finite P, but not known for all alpha>1.
+
+**Sharpness (PROVED in the full function Hilbert space, NOT merely the arithmetic subclass):** For A_P=prod(I-S_p), exact operator norms are ||A_P||=prod(1+p^(-alpha/2)) and ||A_P^(-1)||=prod(1-p^(-alpha/2))^(-1). An isometry to weighted right shifts on L2(0,infinity), approximate oscillatory eigenvectors and Kronecker approximation of log primes yield equality. This defeats any attempt to obtain a uniform estimate in the number of primes using ONLY abstract prime-dilation operator norms.
+
+**Euler-product threshold (CLASSICAL DEDUCTION):** For P_y={p<=y}, at alpha>2 the exact norm limits are zeta(alpha/2)/zeta(alpha) (forward) and zeta(alpha/2) (inverse). At alpha=2, by Mertens' third theorem, these grow like (6/pi^2)*exp(gamma)*log(y) and exp(gamma)*log(y), respectively. At 0<alpha<2, both logarithms are asymptotic to y^(1-alpha/2)/((1-alpha/2)*log(y)) using the prime number theorem. This is a sharp failure of UNIFORM UNIVERSAL NORM bounds, not evidence of divergence for the arithmetic Mertens function.
+
+**Actually executed:** Standard-library Python 3 code checked mu by an independent trial division for 1000 integers; exactly reconstructed the Mertens function through N=16384 for 7 finite prime sets; passed 7 Fraction-exact energy inequalities at N=256,alpha=2; and passed 28 real-exponent finite-energy inequalities at N=16384,alpha=1.25,1.5,2,3. Computed exact finite Euler products for y=10,100,1000,10000,100000 and alpha=1.5,2,2.5,3. For y=100000, inverse product =32700.634712 at alpha=1.5, =20.511593 at alpha=2 and =2.611132 at alpha=3.
+
+**Files on main:** research/riemann_phase27_prime_dilation.md; experiments/riemann_phase27_prime_dilation.py; experiments/riemann_phase27_energy.csv; experiments/riemann_phase27_operator_norms.csv.
+
+**Integrity:** The underlying number-theoretic facts and operator-shift ideas are standard; novelty unchecked. The prime-dilation barrier does not imply RH, disprove RH, or establish a new zero-free region. The specific next missing fact is arithmetic cross-prime correlation/cancellation stronger than the universal operator-norm triangle inequality. **RH remains open.**
