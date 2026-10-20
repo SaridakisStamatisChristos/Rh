@@ -133,6 +133,34 @@ def main():
                 assert j==alt,(cutoff,p,alpha,j,alt)
                 crosschecks+=1
     print(f'INDEPENDENT DOUBLE-SUM CROSSCHECKS: {crosschecks}/{crosschecks} PASS')
+    # Exact aggregate over ALL primes below each finite cutoff. The final
+    # prime-excised prefix equals 1 on [1,X), providing base 1-X**(-alpha).
+    aggregate_cases=0
+    for cutoff in (16,32,64):
+        M=[0]
+        for n in range(1,cutoff+1):
+            M.append(M[-1]+mu[n])
+        for alpha in (1,2,3):
+            removed=[]
+            rhs=Fraction(1)-Fraction(1,cutoff**alpha)
+            for p in range(2,cutoff+1):
+                if any(p%d==0 for d in range(2,isqrt(p)+1)):
+                    continue
+                removed.append(p)
+                f=[0]
+                total=0
+                for n in range(1,cutoff+1):
+                    if not any(n%q==0 for q in removed):
+                        total+=mu[n]
+                    f.append(total)
+                sf=[f[n//p] for n in range(cutoff+1)]
+                rhs+=energy_exact(sf,alpha,cutoff)
+                rhs-=2*sum((Fraction(1,n**alpha)-Fraction(1,(n+1)**alpha))
+                            *f[n]*sf[n] for n in range(1,cutoff))
+            assert all(f[n]==1 for n in range(1,cutoff))
+            assert rhs==energy_exact(M,alpha,cutoff),(cutoff,alpha)
+            aggregate_cases+=1
+    print(f'ALL-PRIME COVARIANCE TELESCOPING: {aggregate_cases}/{aggregate_cases} PASS')
     print('ALL EXACT TESTS PASS. NO RH PROOF OR NEW ZERO-FREE REGION.')
 
 
