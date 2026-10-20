@@ -28,8 +28,9 @@ This yields research targets involving upper bounds for `C_α(N)`. In particular
 - `research/riemann_phase14_proof.md` — logarithmic moving-exponent sign-stability theorem.
 - `research/riemann_phase15_proof.md` — Korobov–Vinogradov moving-exponent corridor and the fixed-exponent obstruction.
 - `research/riemann_phase16_dyadic_cancellation.md` — dyadic counterexample, finite exponent-uniform proof, one-sided budget criterion, and randomized null model.
-- `certificates/` — finite integer-arithmetic C++ checks (original programs). These verify computations, not RH.
-- `experiments/` — additional C++ and Python cross-checks, including Phase XIV–XV moving-exponent experiments and the Phase XVI integer-arithmetic / randomized-null audit.
+- `research/riemann_phase17_structural_barrier.md` — dyadic positive-budget criterion and explicit countermodel showing why generic Mertens bounds cannot force fixed-exponent negativity.
+- `certificates/` — finite integer-arithmetic C++ checks (original programs). These verify computations, not RH. The Phase XVII Python witness certificate checks an explicit nonmultiplicative countermodel.
+- `experiments/` — additional C++ and Python cross-checks, including Phase XIV–XV moving-exponent experiments, the Phase XVI randomized-null audit, and the Phase XVII dyadic spectrum.
 - `research/STATUS_AND_AUDIT.md` — verification scope, hypotheses, source dependencies and next work.
 
 ## Reproduction
