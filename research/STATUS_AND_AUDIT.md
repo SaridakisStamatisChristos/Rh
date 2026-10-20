@@ -95,3 +95,15 @@ Sources: \`research/riemann_phase16_dyadic_cancellation.md\`, \`experiments/riem
 Files: research/riemann_phase17_structural_barrier.md, certificates/riemann_phase17_witness.py, experiments/riemann_phase17_dyadic_spectrum.cpp, and experiments/riemann_phase17_dyadic_spectrum.csv.
 
 **Outstanding:** exploit arithmetic multiplicativity or another Mobius-specific principle to control the positive budget for fixed 1<alpha<2. RH remains open.
+
+## Phase XVIII (20 October 2026)
+
+**Exact, classical divisor-cancellation mechanism:** For G_N(d,e)=floor(N/lcm(d,e)), the divisor incidence factorization is a^T G_N a=sum_{n<=N}(sum_{d|n}a_d)^2. In particular for actual Mobius coefficients mu, the value is exactly 1 for every N. This is not an estimate of the Mertens function.
+
+**Independent random-sign null:** On the same squarefree support, independent Rademacher signs have expected divisor Gram energy sum_{d<=N}mu(d)^2 floor(N/d)=sum_{n<=N}2^{omega(n)}=(6/pi^2)N log N+O(N). This is standard and shows extreme divisor-orthogonality, not ordinary prefix cancellation.
+
+**Proof obstruction:** Mobius inversion sends z_n=sum_{d|n}a_d to a_n=sum_{d|n}mu(n/d)z_d and ordinary prefixes A(k)=sum_{d<=k}z_d M(floor(k/d)). Plugging the latter into the positive max-kernel energy shows that a uniform sieve-to-prefix operator estimate for every alpha>1 would imply RH by applying it to z=e_1; that operator estimate is NOT proved and the exact Gram identity alone does not give it. The familiar Mertens RH-equivalent energy bound remains open.
+
+**Executed:** In Python 3, independent exact lcm Gram expansion, inversion, recurrence and Fraction-valued max-kernel energy comparisons all passed for N=16,32,64,128. A fixed-seed 200-trial comparator at N=256,1024,4096 produced exact null expectations 1065, 5125 and 23953, while actual Mobius energy equals 1. The source files are research/riemann_phase18_divisor_gram.md and experiments/riemann_phase18_divisor_gram.py. Neither the algebra nor the null-model asymptotic is claimed novel.
+
+**RH remains open.** Phase XIX should test a genuinely nontrivial arithmetic bound on the sieve-to-prefix transfer, rather than treating exact divisor cancellation as a free norm bound.
