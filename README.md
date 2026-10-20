@@ -35,6 +35,7 @@ This yields research targets involving upper bounds for `C_α(N)`. In particular
 - `research/riemann_phase21_dilation_localization.md` — exact arithmetic-dilation symmetry, finite-coordinate no-go theorem, and unconditional high-divisor spectral compression.
 - `research/riemann_phase22_spectral_pnt.md` — a spectral reformulation of the Prime Number Theorem, exact spectral power-saving equivalences, and an unconditional Korobov–Vinogradov subpower bound.
 - `research/riemann_phase23_inverse_spectrum.md` — exact Möbius-free inverse, determinant, inverse trace asymptotic, unconditional smallest-eigenvalue estimate, and RH-equivalent condition-number criterion.
+- `research/riemann_phase24_prime_dual.md` — exact odd-prime inverse Gram rank-one structure, uniformly normalized prime-sector eigenvalues, and an explicit Schur-complement energy lower bound.
 - `certificates/` — finite integer-arithmetic C++ checks (original programs). These verify computations, not RH. The Phase XVII Python witness certificate checks an explicit nonmultiplicative countermodel.
 - `experiments/` — additional C++ and Python cross-checks, including Phase XIV–XV moving-exponent experiments, the Phase XVI randomized-null audit, the Phase XVII dyadic spectrum Phase XVIII exact Gram checks, Phase XIX spectral diagnostics, Phase XXI compressed-matrix tests, and Phase XXII normalized-trace diagnostics.
 - `research/STATUS_AND_AUDIT.md` — verification scope, hypotheses, source dependencies and next work.
